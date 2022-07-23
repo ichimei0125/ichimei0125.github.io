@@ -1,0 +1,34 @@
+baseURL = 'https://ichimei0125.github.io/'
+languageCode = 'ja-jp'
+title = '鳴のブログ'
+theme = "ananke"
+disqusShortname = "ichimei0125"
+
+copyright = '鳴'
+defaultContentLanguage = 'ja'
+[languages]
+  [languages.en]
+    title = "鳴's blog"
+    weight = 2
+  [languages.ja]
+    title = '鳴ちゃんのブログ'
+    weight = 1
+  [languages.zh]
+    title = '小鳴的博客'
+    weight = 3
+
+[[params.ananke_socials]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/%E4%B8%80%E9%B3%B4-%E5%8F%B2-23a7a41b8/"
+
+[[params.ananke_socials]]
+name = "twitter"
+url = "https://twitter.com/ichimei0125"
+
+[[params.ananke_socials]]
+name = "github"
+url = "https://github.com/ichimei0125"
+
+commentoEnable = true
+#  [params.navigation]
+#    help = 'Help'
