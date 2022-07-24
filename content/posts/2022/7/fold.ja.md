@@ -57,7 +57,7 @@ recursion(numsDivide[1:], numsDivide[0]) # 結果は3
 
 ## Fold
 
-ここで、フォールドという概念を紹介します。ウィキペディアはこちら[wiki](https://zh.wikipedia.org/wiki/Fold_(%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0))
+ここで、フォールドという概念を紹介します。ウィキペディアはこちら[wiki](https://en.wikipedia.org/wiki/Fold_(higher-order_function))
 
 簡単というと、Foldはarray、listのようなシーケンスデータを一つ一つのデータに分解する関数です。
 

@@ -56,7 +56,7 @@ recursion(numsDivide[1:], numsDivide[0]) # result is 3
 
 ## Fold
 
-Here is a introduce about Fold [wiki](https://zh.wikipedia.org/wiki/Fold_(%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0))
+Here is a introduce about Fold [wiki](https://en.wikipedia.org/wiki/Fold_(higher-order_function))
 
 Fold can split iterable data (like arrays and lists) into individual data.
 
