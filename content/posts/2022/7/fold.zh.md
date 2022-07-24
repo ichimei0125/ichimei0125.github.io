@@ -1,5 +1,5 @@
 ---
-title: "如何将一串数据拆分成单个数据ーーFold高阶函数简介"
+title: "如何将一串数据拆分成单个数据 -- Fold高阶函数简介"
 date: 2022-07-23T12:30:17+09:00
 draft: false
 tags: ["programming"]
@@ -39,7 +39,7 @@ math.gcd(numsDivide) # NG
 
 虽然类似以下的代码也能得到正确的答案, 不过并不优雅，执行起来也费时间
 
-实际上以下代码执行是会出现 *Time Limit Exceeded* 超时的问题
+实际上以下代码执行是会出现 *Memory Limit Exceeded* 问题
 
 所以有没有什么简洁优雅的方法？
 
@@ -47,8 +47,6 @@ math.gcd(numsDivide) # NG
 def recursion(arr: List[int], cur: int) -> int:
     if len(arr) == 0:
         return cur
-    if len(arr) == 1:
-        return math.gcd(arr[0], cur)
     
     tmp = math.gcd(arr[0], cur)
     return recursion(arr[1:], tmp)
@@ -63,7 +61,7 @@ recursion(numsDivide[1:], numsDivide[0]) # 结果是3
 
 简单来说Fold可以将array, list这样的iterable的数据，拆分成单个的数据
 
-那么之前的代码就可以写成如下的代码, 并且也没有*Time Limit Exceeded*问题
+那么之前的代码就可以写成如下的代码, 并且也没有*Memory Limit Exceeded*问题
 
 ```python
 import functools

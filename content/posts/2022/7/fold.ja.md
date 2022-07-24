@@ -1,7 +1,6 @@
 ---
-title: "シーケンスデータを単独データになる方法ーーフォールドについて"
+title: "シーケンスデータを単独データになる方法 -- フォールドについて"
 date: 2022-07-23T12:30:17+09:00
-description: "aaa"
 draft: false
 tags: ["programming"]
 ---
@@ -31,7 +30,7 @@ nums = [2,3,2,4,3], numsDivide = [9,6,9,3,15]
 
 pythonのgcdは[math.gcd(*integers)](https://docs.python.org/ja/3/library/math.html#math.gcd)リストを与えられません
 
-つなり
+つまり
 
 ```python
 math.gcd(9,6,9,3,15) # OK 
@@ -40,7 +39,7 @@ math.gcd(numsDivide) # NG
 
 下記のようなコードも解けますが、エレガントとは言えませんし、実行時間もかかります
 
-実際下記コードを提出すると *Time Limit Exceeded* になります
+実際下記コードを提出すると *Memory Limit Exceeded* になります
 
 なので、何か簡潔、エレガントな方法ありませんでしょうか
 
@@ -48,8 +47,6 @@ math.gcd(numsDivide) # NG
 def recursion(arr: List[int], cur: int) -> int:
     if len(arr) == 0:
         return cur
-    if len(arr) == 1:
-        return math.gcd(arr[0], cur)
     
     tmp = math.gcd(arr[0], cur)
     return recursion(arr[1:], tmp)
@@ -65,6 +62,8 @@ recursion(numsDivide[1:], numsDivide[0]) # 結果は3
 簡単というと、Foldはarray、listのようなシーケンスデータを一つ一つのデータに分解する関数です。
 
 では、上記の再帰コードを下記のようなコードに書き換えます
+
+※ *Memory Limit Exceeded* ならない
 
 ```python
 import functools

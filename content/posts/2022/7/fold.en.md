@@ -1,5 +1,5 @@
 ---
-title: "How to turn iterable to individual data ーー about"
+title: "How to turn iterable to individual data -- about Fold"
 date: 2022-07-23T12:30:17+09:00
 draft: false
 tags: ["programming"]
@@ -38,7 +38,7 @@ math.gcd(numsDivide) # NG
 
 Although a code like the one below will give the correct answer, it is not elegant and takes time to execute
 
-In fact, the following code will execute with a *Time Limit Exceeded* timeout problem
+In fact, the following code will execute with a *Memory Limit Exceeded* problem
 
 So, it there an elegant way?
 
@@ -46,8 +46,6 @@ So, it there an elegant way?
 def recursion(arr: List[int], cur: int) -> int:
     if len(arr) == 0:
         return cur
-    if len(arr) == 1:
-        return math.gcd(arr[0], cur)
     
     tmp = math.gcd(arr[0], cur)
     return recursion(arr[1:], tmp)
@@ -62,7 +60,7 @@ Here is a introduce about Fold [wiki](https://zh.wikipedia.org/wiki/Fold_(%E9%AB
 
 Fold can split iterable data (like arrays and lists) into individual data.
 
-Then the previous code can be written as follows, and there is no *Time Limit Exceeded* problem
+Then the previous code can be written as follows, and there is no *Memory Limit Exceeded* problem
 
 ```python
 import functools
